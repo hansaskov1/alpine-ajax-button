@@ -21,13 +21,13 @@ const Head = ({ children }: { children: undefined | {} }) => (
 
 const LikeButton = ({ id }: { id: string }) => (
     <form id="like" x-init x-target method="post" action={`/comments/${id}/like`}>
-        <button name="id" value={id}>Like</button>
+        <button >Like</button>
     </form>
 )
 
 const UnlikeButton = ({ id }: { id: string }) => (
     <form id="like" x-init x-target method="delete" action={`/comments/${id}/like`}>
-        <button name="id" value={id} x-autofocus>Unlike</button>
+        <button x-autofocus>Unlike</button>
     </form>
 )
 
