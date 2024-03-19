@@ -19,7 +19,6 @@ const Head = ({ children }: { children: undefined | {} }) => (
     </html>
 );
 
-
 const LikeButton = ({ id }: { id: string }) => (
     <form id="like" x-init x-target method="post" action={`/comments/${id}/like`}>
         <button name="id" value={id}>Like</button>
@@ -45,7 +44,6 @@ const app = new Elysia()
     .post("comments/:id/like", ({ params }) => (
         <UnlikeButton id={params.id} />
     ))
-
     .listen(3000);
 
 console.log(
